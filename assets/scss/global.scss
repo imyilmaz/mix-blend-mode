@@ -43,7 +43,7 @@
         }
         &#mix-blend-mode-color-burn{
             &:checked~.label-set{
-                .mix-blend-mode-burn{
+                .mix-blend-mode-color-burn{
                     background: #000;
                     border-color: #000;
                     color: #e09900;
@@ -301,6 +301,39 @@
                 .t3{
                     .lights{
                         mix-blend-mode: lighten;
+                    }
+                }
+            }
+        }
+        &#mix-blend-mode-plus-lighter{
+            &:checked~.label-set{
+                .mix-blend-mode-plus-lighter{
+                    background: #000;
+                    border-color: #000;
+                    color: #e09900;
+                }
+            }
+            &:checked~.effect-set{
+                .images{
+                    img{
+                        mix-blend-mode: plus-lighter;
+                    }
+                }
+                .t1{
+                    span{
+                        &:before{
+                            mix-blend-mode: plus-lighter;
+                        }
+                    }
+                }
+                .t2{
+                    .gradient{
+                        mix-blend-mode: plus-lighter;
+                    }
+                }
+                .t3{
+                    .lights{
+                        mix-blend-mode: plus-lighter;
                     }
                 }
             }
@@ -740,4 +773,16 @@
         
     }
 }//main
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    a{ 
+        display: block; 
+        color: #010101;
+        font-weight: bold;
+        font-size: 2rem; 
+    }
+}
 
